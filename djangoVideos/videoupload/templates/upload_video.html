@@ -1,0 +1,8 @@
+<!-- upload_video.html -->
+<label for="admin_upload">Home: </label><a id="admin_upload" href="{% url 'all_videos' %}">All Video</a>
+
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Upload</button>
+</form>
